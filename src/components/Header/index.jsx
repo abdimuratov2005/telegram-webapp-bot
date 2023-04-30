@@ -1,6 +1,6 @@
 import styled from './header.module.scss';
 import Button from '../Button';
-import { useTelegram } from '../../../hooks/useTelegram';
+import { useTelegram } from '../../hooks/useTelegram';
 
 const Header = () => {  
 
