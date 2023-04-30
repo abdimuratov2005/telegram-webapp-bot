@@ -1,21 +1,17 @@
 import styled from './header.module.scss';
 import Button from '../Button';
-const telegram = window.Telegram.WebApp;
+import { useTelegram } from '../../../hooks/useTelegram';
 
 const Header = () => {  
 
-  const onClose = () => {
-    telegram.close();
-  }
-
-
+  const {user, onClose} = useTelegram()
 
   return(
     <>
       <header className={styled.header}>
         <Button onClick={onClose}>Close</Button>
         <span className={styled.username}>
-          {telegram.initDataUnsafe?.user?.username}
+          {user}
         </span>
       </header>
     </>
